@@ -81,6 +81,4 @@ We use [git](https://git-scm.com/) for versioning.
 
 ## Authors
 
-* **Morgan Millet**
-
-## License
+**Morgan Millet**
