@@ -1,4 +1,6 @@
-horiBar = "-"
+import os 
+
+horiBar = "----------"
 vertBar = "|"
 space = " "
 
@@ -20,132 +22,159 @@ a = 0
 def affichage():
     global case1, case2, case3, case4, case5, case6, case7, case8, case9
 
+    print('\n')
     print(case1, vertBar, case2, vertBar, case3)
-    print(horiBar, horiBar, horiBar, horiBar, horiBar)
+    print(horiBar)
     print(case4, vertBar, case5, vertBar, case6)
-    print(horiBar, horiBar, horiBar, horiBar, horiBar)
+    print(horiBar)
     print(case7, vertBar, case8, vertBar, case9, '\n')     
 
 
 def turn_player1():
-    global case1, case2, case3, case4, case5, case6, case7, case8, case9
+    global a, case1, case2, case3, case4, case5, case6, case7, case8, case9
 
     player1 = int(input("Joueur 1 : "))
 
-    if(player1 == 7):
-        if(case1 == circle):
-            print("Case déjà utilisé! \n")
-            turn_player1()
-        else:
-            case1 = cross
-    elif(player1 == 8):
-        if(case2 == circle):
-            print("Case déjà utilisé! \n")
-            turn_player1()
-        else:        
-            case2 = cross
-    elif(player1 == 9):
-        if(case3 == circle):
-            print("Case déjà utilisé! \n")
-            turn_player1()
-        else:        
-            case3 = cross
-    elif(player1 == 4):
-        if(case4 == circle):
-            print("Case déjà utilisé! \n")
-            player1 = int(input("Joueur 1 : "))
-        else:        
-            case4 = cross
-    elif(player1 == 5):
-        if(case5 == circle):
-            print("Case déjà utilisé! \n")
-            player1 = int(input("Joueur 1 : "))
-        else:        
-            case5 = cross
-    elif(player1 == 6):
-        if(case6 == circle):
-            print("Case déjà utilisé! \n")
-            player1 = int(input("Joueur 1 : "))
-        else:        
-            case6 = cross
-    elif(player1 == 1):
-        if(case7 == circle):
-            print("Case déjà utilisé! \n")
-            player1 = int(input("Joueur 1 : "))
-        else:        
-            case7 = cross
-    elif(player1 == 2):
-        if(case8 == circle):
-            print("Case déjà utilisé! \n")
-            player1 = int(input("Joueur 1 : "))
-        else:        
-            case8 = cross
-    elif(player1 == 3):
-        if(case9 == circle):
-            print("Case déjà utilisé! \n")
-            player1 = int(input("Joueur 1 : "))
-        else:        
-            case9 = cross
+    if (player1 > 9):
+        print("\033[31mVeuillez choisir une case entre 1 et 9 !\033[0m")
+        turn_player1()
+    else:
+        if(player1 == 7):
+            if(case1 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:
+                case1 = cross
+                a+=1
+        elif(player1 == 8):
+            if(case2 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case2 = cross
+                a+=1
+        elif(player1 == 9):
+            if(case3 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case3 = cross
+                a+=1
+        elif(player1 == 4):
+            if(case4 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case4 = cross
+                a+=1
+        elif(player1 == 5):
+            if(case5 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case5 = cross
+                a+=1
+        elif(player1 == 6):
+            if(case6 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case6 = cross
+                a+=1
+        elif(player1 == 1):
+            if(case7 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case7 = cross
+                a+=1
+        elif(player1 == 2):
+            if(case8 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case8 = cross
+                a+=1
+        elif(player1 == 3):
+            if(case9 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player1()
+            else:        
+                case9 = cross
+                a+=1
 
 def turn_player2():
-    global case1, case2, case3, case4, case5, case6, case7, case8, case9
+    global a, case1, case2, case3, case4, case5, case6, case7, case8, case9
 
     player2 = int(input("Joueur 2 :"))
 
-    if(player2 == 7):
-        if(case1 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case1 = circle
-    elif(player2 == 8):
-        if(case2 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case2 = circle
-    elif(player2 == 9):
-        if(case3 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case3 = circle
-    elif(player2 == 4):
-        if(case4 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case4 = circle
-    elif(player2 == 5):
-        if(case5 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case5 = circle
-    elif(player2 == 6):
-        if(case6 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case6 = circle
-    elif(player2 == 1):
-        if(case7 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case7 = circle
-    elif(player2 == 2):
-        if(case8 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case8 = circle
-    elif(player2 == 3):
-        if(case9 == cross):
-            print("Case déjà utilisé! \n")
-            player2 = int(input("Joueur 2 : "))
-        else:
-            case9 = circle    
+    if (player2 > 9):
+        print("\033[31mVeuillez choisir une case entre 1 et 9 !\033[0m")
+        turn_player2()
+    else:
+        if(player2 == 7):
+            if(case1 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case1 = circle
+                a+=1
+        elif(player2 == 8):
+            if(case2 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case2 = circle
+                a+=1
+        elif(player2 == 9):
+            if(case3 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case3 = circle
+                a+=1
+        elif(player2 == 4):
+            if(case4 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case4 = circle
+                a+=1
+        elif(player2 == 5):
+            if(case5 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case5 = circle
+                a+=1
+        elif(player2 == 6):
+            if(case6 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case6 = circle
+                a+=1
+        elif(player2 == 1):
+            if(case7 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case7 = circle
+                a+=1
+        elif(player2 == 2):
+            if(case8 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case8 = circle
+                a+=1
+        elif(player2 == 3):
+            if(case9 != space):
+                print("\033[31mCase déjà utilisé !\033[0m")
+                turn_player2()
+            else:
+                case9 = circle
+                a+=1 
 
 def player1_win():
     if ((case1 == cross) &
@@ -180,7 +209,7 @@ def player1_win():
         (case5 == cross) & 
         (case7 == cross)):
 
-        print("Joueur 1 gagne \n")
+        print("\033[32mJoueur 1 gagne !\033[0m")
         exit()
 
 def player2_win():
@@ -216,22 +245,34 @@ def player2_win():
         (case5 == circle) & 
         (case7 == circle)):
 
-        print("Joueur 2 gagne \n")
+        print("\033[32mJoueur 2 gagne !\033[0m")
         exit()
 
-while (a <= 8):
+
+os.system('clear')
+
+print("Bienvenu dans le jeu du Morpion !\n")
+print("Pour jouer, les joueurs doivent chacun leur tour inséré un numéro de 0 à 9")
+print("correspondant à la case ou il souhaite mettre leur symbole, à savoir, 7 étant")
+print("la première case en haut à gauche, 3 la dernière case en bas à droite, etc..")
+print("Le but du jeu et d'aligner, verticalement, horizontalement ou diagonalement")
+print("3 de vos symbole avant votre adversaire. Si aucun des deux joueurs n'a réussi") 
+print("à aligner 3 symbole il y'a match nul. \n \n \n")
+
+while (a <= 9):
+
     turn_player1()
     affichage()
     player1_win()
-    
-    a+=1
 
+    if(a == 9):
+        print("\033[34mMatch nul !\033[0m")
+        break
+    
     turn_player2()
     affichage()
     player2_win()
 
-    a+=1
-    
-    if(a>=8):
-        print("match nul")
+    if(a == 9):
+        print("\033[34mMatch nul !\033[0m")
         break

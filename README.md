@@ -44,25 +44,25 @@ To play you must insert the number of the box where you want to place your symbo
 The goal of the game is to align, vertically, horizontally or diagonally 3 of your symbols before your opponent. If neither player has been able to match 3 symbols, there is a draw.
 
 ```
-Joueur 1 : 5
+Joueur 1 : 1
 ```
 ```
-  |   |  
-- - - - -
-  | X |  
-- - - - -
-  |   |   
+   |   |  
+ - - - - - 
+   |   |  
+ - - - - - 
+ X |   |   
 
 ```
 ```
 Joueur 2 : 9
 ```
 ```
-  |   |  
-- - - - -
-  | X |  
-- - - - -
-  |   | O  
+   |   | O 
+ - - - - -
+   |   |  
+ - - - - -
+ X |   |   
 ```
 
 ## Built With
