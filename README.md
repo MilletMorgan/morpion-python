@@ -70,14 +70,10 @@ Joueur 2 : 9
 * [Visual Studio Code](https://code.visualstudio.com/) - Text editor
 * [Python3](https://www.python.org/) - Programming langage
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
 
-We use [git](https://git-scm.com/) for versioning.
+I use [git](https://git-scm.com/) for versioning.
 
-## Authors
+## Author
 
 **Morgan Millet**
