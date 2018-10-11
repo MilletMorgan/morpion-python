@@ -38,10 +38,10 @@ python3 morpion.py
 ### How to play
 
 Pour jouer il faut insérer le numéro de la case ou vous souhaitez placer votre symbole.
-Le but du jeu et d'aligner, verticalement, horizontalement ou diagonalement 3 de vos symbole avant votre adversaire. Si aucun des deux n'a réussi à alligner 3 symbole il y'a match nul.
+Le but du jeu et d'aligner, verticalement, horizontalement ou diagonalement 3 de vos symbole avant votre adversaire. Si aucun des deux joueurs n'a réussi à aligner 3 symbole il y'a match nul.
 
 To play you must insert the number of the box where you want to place your symbol.
-The goal of the game is to align, vertically, horizontally or diagonally 3 of your symbols before your opponent. If neither of them managed to match 3 symbols, there is a draw.
+The goal of the game is to align, vertically, horizontally or diagonally 3 of your symbols before your opponent. If neither player has been able to match 3 symbols, there is a draw.
 
 ```
 Joueur 1 : 5
