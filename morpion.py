@@ -32,19 +32,19 @@ def turn_player1():
 
     player1 = int(input("Joueur 1 : "))
 
-    if(player1 == 1):
+    if(player1 == 7):
         if(case1 == circle):
             print("Case déjà utilisé! \n")
             turn_player1()
         else:
             case1 = cross
-    elif(player1 == 2):
+    elif(player1 == 8):
         if(case2 == circle):
             print("Case déjà utilisé! \n")
             turn_player1()
         else:        
             case2 = cross
-    elif(player1 == 3):
+    elif(player1 == 9):
         if(case3 == circle):
             print("Case déjà utilisé! \n")
             turn_player1()
@@ -68,19 +68,19 @@ def turn_player1():
             player1 = int(input("Joueur 1 : "))
         else:        
             case6 = cross
-    elif(player1 == 7):
+    elif(player1 == 1):
         if(case7 == circle):
             print("Case déjà utilisé! \n")
             player1 = int(input("Joueur 1 : "))
         else:        
             case7 = cross
-    elif(player1 == 8):
+    elif(player1 == 2):
         if(case8 == circle):
             print("Case déjà utilisé! \n")
             player1 = int(input("Joueur 1 : "))
         else:        
             case8 = cross
-    elif(player1 == 9):
+    elif(player1 == 3):
         if(case9 == circle):
             print("Case déjà utilisé! \n")
             player1 = int(input("Joueur 1 : "))
@@ -92,19 +92,19 @@ def turn_player2():
 
     player2 = int(input("Joueur 2 :"))
 
-    if(player2 == 1):
+    if(player2 == 7):
         if(case1 == cross):
             print("Case déjà utilisé! \n")
             player2 = int(input("Joueur 2 : "))
         else:
             case1 = circle
-    elif(player2 == 2):
+    elif(player2 == 8):
         if(case2 == cross):
             print("Case déjà utilisé! \n")
             player2 = int(input("Joueur 2 : "))
         else:
             case2 = circle
-    elif(player2 == 3):
+    elif(player2 == 9):
         if(case3 == cross):
             print("Case déjà utilisé! \n")
             player2 = int(input("Joueur 2 : "))
@@ -128,19 +128,19 @@ def turn_player2():
             player2 = int(input("Joueur 2 : "))
         else:
             case6 = circle
-    elif(player2 == 7):
+    elif(player2 == 1):
         if(case7 == cross):
             print("Case déjà utilisé! \n")
             player2 = int(input("Joueur 2 : "))
         else:
             case7 = circle
-    elif(player2 == 8):
+    elif(player2 == 2):
         if(case8 == cross):
             print("Case déjà utilisé! \n")
             player2 = int(input("Joueur 2 : "))
         else:
             case8 = circle
-    elif(player2 == 9):
+    elif(player2 == 3):
         if(case9 == cross):
             print("Case déjà utilisé! \n")
             player2 = int(input("Joueur 2 : "))
@@ -150,27 +150,71 @@ def turn_player2():
 def player1_win():
     if ((case1 == cross) &
         (case2 == cross) & 
-        (case3 == cross) | 
+        (case3 == cross) |
+
+        (case4 == cross) &
+        (case5 == cross) &
+        (case6 == cross) |
+
+        (case7 == cross) &
+        (case8 == cross) &
+        (case9 == cross) |
+
         (case1 == cross) & 
         (case4 == cross) & 
-        (case7 == cross) | 
+        (case7 == cross) |
+
+        (case2 == cross) & 
+        (case5 == cross) & 
+        (case8 == cross) |
+        
+        (case3 == cross) & 
+        (case6 == cross) & 
+        (case9 == cross) |
+
         (case1 == cross) & 
         (case5 == cross) & 
-        (case9 == cross)):
+        (case9 == cross) |
+
+        (case3 == cross) & 
+        (case5 == cross) & 
+        (case7 == cross)):
 
         print("Joueur 1 gagne \n")
         exit()
 
 def player2_win():
-    if ((case1 == circle) & 
+    if ((case1 == circle) &
         (case2 == circle) & 
-        (case3 == circle) | 
+        (case3 == circle) |
+
+        (case4 == circle) &
+        (case5 == circle) &
+        (case6 == circle) |
+
+        (case7 == circle) &
+        (case8 == circle) &
+        (case9 == circle) |
+
         (case1 == circle) & 
         (case4 == circle) & 
-        (case7 == circle) | 
+        (case7 == circle) |
+
+        (case2 == circle) & 
+        (case5 == circle) & 
+        (case8 == circle) |
+        
+        (case3 == circle) & 
+        (case6 == circle) & 
+        (case9 == circle) |
+
         (case1 == circle) & 
         (case5 == circle) & 
-        (case9 == circle)):
+        (case9 == circle) |
+
+        (case3 == circle) & 
+        (case5 == circle) & 
+        (case7 == circle)):
 
         print("Joueur 2 gagne \n")
         exit()
