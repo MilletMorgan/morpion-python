@@ -2,7 +2,7 @@
 
 Voici un petit programme pour jouer au morpion sur un terminal à deux joueur.
 
-Here's a little program to play the to the morpion on a terminal with two-player.
+Here's a little program to play to the morpion on a terminal with two-player.
 ## Getting Started
 
 Ces instructions vont vous permettre d'obtenir le projet et de l'éxécuter sur votre machine locale.
